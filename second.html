@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="second.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <div class="nav">
+            <button>Authors</button>
+            <button>Books</button>
+            <button>Add Book</button>
+        </div>
+        <div class="all-input">
+            <input type="text" name="" placeholder="title :" id="">
+            <input type="text" name="" placeholder="author :" id="">
+            <input type="text" placeholder="published :">
+            <input type="text" placeholder="add genres :">
+            <div class="genres">
+                <h3>Genres:</h3>
+                <p>horror</p>
+                <p>fiction</p>
+                <p>mystery</p>
+                <p>romance</p>
+                <p>science fiction</p>
+                <p>fantasy</p>
+            </div>
+            <button class="finishing-button">create book</button>
+        </div>
+    </div>
+    <script>
+        const bubbles = 50; // Number of bubbles
+    
+        for (let i = 0; i < bubbles; i++) {
+          const bubble = document.createElement('div');
+          bubble.className = 'bubble';
+          document.body.appendChild(bubble);
+          const size = Math.random() * 40 + 20; // Random bubble size between 20 and 60px
+          bubble.style.width = `${size}px`;
+          bubble.style.height = `${size}px`;
+          bubble.style.left = `${Math.random() * window.innerWidth}px`; // Random horizontal position
+          bubble.style.animationDuration = `${Math.random() * 22 + 18}s`; // Random animation duration between 4 and 10s
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+  const button = document.querySelector('.finishing-button');
+  const colors = ['#2E86C1', '#3498DB', '#1E8449', '#27AE60']; // Define your colors here
+  let colorIndex = 0;
+
+  setInterval(() => {
+    button.style.backgroundColor = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length;
+  }, 1000); // Change color every second (adjust timing as needed)
+})
+      </script>
+</body>
+</html>

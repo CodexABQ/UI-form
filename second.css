@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: linear-gradient(to bottom, #154360, #1E8449); /* Gradient from deep blue to teal */
+    height: 100vh;
+    padding-top: 4em;
+    /* Add vendor prefixes for broader browser support */
+    background: -webkit-linear-gradient(top, #154360, #1E8449);
+    background: -moz-linear-gradient(top, #154360, #1E8449);
+    background: -o-linear-gradient(top, #154360, #1E8449);
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: 0;
+    animation: bubbleAnimation 10s infinite;
+  }
+  
+  @keyframes bubbleAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px) scale(2);
+      opacity: 0;
+    }
+  }
+
+.body{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    width: 50vw;
+    max-width: 20em;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    animation: wet 4s infinite alternate;
+}
+@keyframes wet {
+    0%{
+        opacity: 1;
+    }50%{
+        opacity: 0.7;
+    }100%{
+        opacity: 1;
+    }
+}
+.body .nav{
+    display: flex;
+    justify-content: center;
+}
+.body .nav button{
+    border: none;
+    padding: 4px 7px;
+    background: none;
+    margin: 4px;
+}
+.body .nav button:nth-child(3){
+    background-color: rgba(255, 255, 255, 0.13);
+    border-bottom: 2px solid black;
+}
+.body .all-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.body .all-input input{
+    background-color: rgba(0, 0, 0, 0.171);
+    height: 2.6em;
+    width: 80%;
+    padding: .3em 1em;
+    margin: .3em;
+    border-radius: 75px;
+    color: white;
+    border: none;
+}
+.body .all-input input::placeholder{
+    color: rgba(255, 228, 196, 0.548);
+    text-transform: capitalize;
+}
+.body .genres{
+    display: flex;
+    max-width: 95%;
+    flex-wrap: wrap;
+}
+.body .genres p{
+    background-color: rgba(0, 0, 0, 0.692);
+    color: rgba(255, 255, 255, 0.74);
+    padding: .4em .8em;
+    margin: .4em;
+    text-transform: capitalize;
+    border-radius: 75px;
+}
+.body .genres h3{
+    color: black;
+    padding-top: .5em;
+}
+.finishing-button{
+    padding: .5em 1em;
+    border-radius: 75px;
+    border: none;
+    text-transform: capitalize;
+    margin-top: 1.2em;
+    background-color: #2E86C1; /* Initial background color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
